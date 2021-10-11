@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# ZSH
+ln -s ~/.dotfiles/zsh/.zshenv ~/.zshenv
+ln -s ~/.dotfiles/zsh/.zshrc ~/.config/zsh/.zshrc
+ln -s ~/.dotfiles/zsh/aliases ~/.config/zsh/aliases
+ln -s ~/.dotfiles/zsh/completion.zsh ~/.config/zsh/completion.zsh
+
 # Git
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 
