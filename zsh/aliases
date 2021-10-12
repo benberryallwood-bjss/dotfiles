@@ -12,3 +12,9 @@ alias lla='l -oA'
 # Directory stack
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
+# Git
+alias gst='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gl='git log'
