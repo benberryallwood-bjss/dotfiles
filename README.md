@@ -23,5 +23,3 @@ git clone https://github.com/benberryallwood-bjss/dotfiles.git ~/.dotfiles
 ```zsh
 ~/.dotfiles/install.sh
 ```
-
-4. Install vim-plug
