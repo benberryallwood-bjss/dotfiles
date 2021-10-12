@@ -73,11 +73,11 @@ autoload -U compinit && compinit
 _comp_options+=(globdots)   # With hidden files
 source $ZDOTDIR/completion.zsh
 
-# -------------------
-# Syntax highlighting
-
-source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # --------------
 # thefuck config
 eval $(thefuck --alias)
+
+# -------------------
+# Syntax highlighting
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
