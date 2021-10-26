@@ -50,6 +50,9 @@ nnoremap ,html :-1read $XDG_CONFIG_HOME/nvim/.html-template.html<CR>6jf>a
 " JavaScript
 iabbr clg console.log()<ESC>
 
+" Java
+iabbr sout System.out.println()<ESC>
+
 " Copy contents of current file to clipboard
 command! CopyFile !cat %:p | pbcopy
 
@@ -121,7 +124,7 @@ let g:airline_theme = 'base16_nord'
 let g:AutoPairsFlyMode = 1
 
 " CoC
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-java']
 
 " Integrated terminal
 " turn terminal to normal mode with escape
