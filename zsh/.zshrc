@@ -5,6 +5,11 @@
 
 source $ZDOTDIR/aliases
 
+# --------
+# Bindings
+
+bindkey -s '^o' '. ranger\n'
+
 # ------
 # Prompt
 
