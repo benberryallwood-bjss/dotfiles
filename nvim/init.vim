@@ -22,6 +22,9 @@ call plug#begin("~/.vim/plugged")
   " Code completion
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+  " Start screen
+  Plug 'mhinz/vim-startify'
+
   " Icons (load last)
   Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -102,8 +105,8 @@ colorscheme nord
 nnoremap <C-n> :NERDTreeToggle<CR>
 
 " start NERDTree when Vim is started without file arguments.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
 " start NERDTree when Vim starts with a directory argument.
 autocmd StdinReadPre * let s:std_in=1
