@@ -142,4 +142,12 @@ function! OpenTerminal()
   split term://zsh
   resize 10
 endfunction
-nnoremap <C-t> :call OpenTerminal()<CR>
+nnoremap <C-T> :call OpenTerminal()<CR>
+
+" Startify options
+" When opening a file or bookmark, seek and change to the root of the repo
+let g:startify_change_to_vcs_root = 1
+" Custom header empty (for now)
+let g:startify_custom_header = ''
+" Use environment variables in path if shorter
+let g:startify_use_env = 1
