@@ -16,3 +16,6 @@ ln -s ~/.dotfiles/nvim/.html-template.html ~/.config/nvim/.html-template.html
 
 # tmux
 ln -s ~/.dotfiles/tmux/tmux.conf ~/.config/tmux/tmux.conf
+
+# Alacritty
+ln -s ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
