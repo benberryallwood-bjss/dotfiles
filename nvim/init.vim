@@ -155,3 +155,5 @@ let g:startify_change_to_vcs_root = 1
 let g:startify_custom_header = ''
 " Use environment variables in path if shorter
 let g:startify_use_env = 1
+" Set directory to save sessions
+let g:startify_session_dir = '~/.config/nvim/session'
