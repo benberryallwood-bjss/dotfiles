@@ -13,6 +13,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'airblade/vim-gitgutter'
   Plug 'jiangmiao/auto-pairs'
   Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/gv.vim'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   " Plug 'tpope/vim-capslock'
@@ -69,9 +70,9 @@ set cursorline
 " Indentation, splitting, etc
 filetype plugin indent on
 " show existing tab with n spaces width
-set tabstop=2
+set tabstop=4
 " when indenting with '>', use n spaces width
-set shiftwidth=2
+set shiftwidth=4
 " On pressing tab, insert spaces
 set expandtab
 
@@ -87,6 +88,9 @@ nnoremap <C-l> <C-w><C-l>
 
 " keep current line centered
 set scrolloff=999
+
+set mouse=a
+set nolazyredraw
 
 " turn off backup
 set nobackup
