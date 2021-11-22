@@ -15,5 +15,7 @@
     "typescript.tsx"
   ],
   "coc.preferences.diagnostic.virtualText": true,
-  "javascript.suggestionActions.enabled": false
+  "javascript.suggestionActions.enabled": false,
+  "codeLens.enable": true,
+  "java.referencesCodeLens.enabled": true
 }
