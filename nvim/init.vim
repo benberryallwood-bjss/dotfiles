@@ -63,6 +63,9 @@ iabbr sout System.out.println()<ESC>
 " Copy contents of current file to clipboard
 command! CopyFile !cat %:p | pbcopy
 
+" Set leader to space
+let mapleader = " "
+
 " Default 4000ms, for gitgutter responsiveness
 set updatetime=100
 
