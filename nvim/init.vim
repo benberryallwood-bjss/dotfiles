@@ -112,7 +112,8 @@ syntax enable
 colorscheme nord
 
 " NERDTree
-nnoremap <C-n> :NERDTreeToggle<CR>
+" nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeFocus<CR>
 
 " start NERDTree when Vim is started without file arguments.
 "autocmd StdinReadPre * let s:std_in=1
