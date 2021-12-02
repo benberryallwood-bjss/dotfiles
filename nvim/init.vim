@@ -73,6 +73,9 @@ set updatetime=100
 set number relativenumber
 set cursorline
 
+" Show fold symbols in column on left
+set foldcolumn=1
+
 " Indentation, splitting, etc
 filetype plugin indent on
 " show existing tab with n spaces width
