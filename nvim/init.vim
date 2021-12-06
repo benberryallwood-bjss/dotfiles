@@ -1,37 +1,12 @@
-" Plugins
-call plug#begin("~/.vim/plugged")
-  " Colourscheme
-  Plug 'shaunsingh/nord.nvim'
+source $XDG_CONFIG_HOME/nvim/vim-plug/plugins.vim
 
-  " NERDTree
-  Plug 'preservim/nerdtree'
-
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  Plug 'farmergreg/vim-lastplace'
-
-  " Airline
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-
-  Plug 'airblade/vim-gitgutter'
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'tpope/vim-fugitive'
-  Plug 'junegunn/gv.vim'
-  Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-surround'
-  " Plug 'tpope/vim-capslock'
-  Plug 'easymotion/vim-easymotion'
-  Plug 'alvan/vim-closetag'
-
-  " Code completion
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-  " Start screen
-  Plug 'mhinz/vim-startify'
-
-  " Icons (load last)
-  Plug 'ryanoasis/vim-devicons'
-call plug#end()
+" Save cursor position and fold info
+set viewoptions=cursor,folds
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
 
 " How to do 90% of what plugins do (with just vim)
 "
