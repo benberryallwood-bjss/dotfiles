@@ -1,11 +1,17 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
+    "java",
     "javascript",
     "typescript",
     "typescriptreact",
     "json",
     "javascriptreact",
-    "typescript.tsx"
+    "typescript.tsx",
+    "python",
+    "html",
+    "yaml",
+    "markdown",
+    "css"
   ],
   "eslint.filetypes": [
     "javascript",
@@ -17,5 +23,6 @@
   "coc.preferences.diagnostic.virtualText": true,
   "javascript.suggestionActions.enabled": false,
   "codeLens.enable": true,
-  "java.referencesCodeLens.enabled": true
+  "java.referencesCodeLens.enabled": true,
+  "python.pythonPath": "python3"
 }
