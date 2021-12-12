@@ -13,6 +13,8 @@ call plug#begin("~/.config/nvim/autoload/plugged")
   " NERDTree
   Plug 'preservim/nerdtree'
 
+  Plug 'folke/which-key.nvim'
+
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
   " Airline

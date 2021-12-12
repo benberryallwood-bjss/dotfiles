@@ -329,3 +329,11 @@ if filereadable("./gradlew")
     let test#java#runner = 'gradletest'
     let test#java#gradletest#executable = './gradlew test'
 endif
+
+" ----------------------------------------------------------------------------
+" which-key
+lua << EOF
+  require("which-key").setup {
+
+  }
+EOF
