@@ -19,6 +19,10 @@ call plug#begin("~/.config/nvim/autoload/plugged")
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  Plug 'airblade/vim-rooter'
+
   Plug 'airblade/vim-gitgutter'
   Plug 'jiangmiao/auto-pairs'
   Plug 'tpope/vim-fugitive'
@@ -31,6 +35,12 @@ call plug#begin("~/.config/nvim/autoload/plugged")
 
   " Code completion
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+  " Snippets
+  Plug 'honza/vim-snippets'
+
+  " Tests
+  Plug 'vim-test/vim-test'
 
   " Start screen
   Plug 'mhinz/vim-startify'

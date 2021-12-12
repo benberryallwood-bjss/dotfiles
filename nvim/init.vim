@@ -4,7 +4,7 @@ source $XDG_CONFIG_HOME/nvim/vim-plug/plugins.vim
 set viewoptions=cursor,folds
 augroup remember_folds
   autocmd!
-  autocmd BufWinLeave * mkview
+  " autocmd BufWinLeave * mkview
   autocmd BufWinEnter * silent! loadview
 augroup END
 
@@ -176,6 +176,24 @@ nnoremap <silent><nowait> <space>g  :<C-u>CocList diagnostics<cr>
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 
 " ----------------------------------------------------------------------------
+" Snippets
+
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" ----------------------------------------------------------------------------
 " Integrated terminal
 " turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>
@@ -193,7 +211,7 @@ nnoremap <C-T> :call OpenTerminal()<CR>
 
 " Startify options
 " When opening a file or bookmark, seek and change to the root of the repo
-let g:startify_change_to_vcs_root = 1
+let g:startify_change_to_vcs_root = 0
 " Custom header empty (for now)
 let g:startify_custom_header = ''
 " Use environment variables in path if shorter
@@ -201,6 +219,81 @@ let g:startify_use_env = 1
 " Set directory to save sessions
 let g:startify_session_dir = '~/.config/nvim/session'
 
+" ----------------------------------------------------------------------------
+" Chris@Machine fzf etc.
+" https://www.chrisatmachine.com/Neovim/08-fzf/
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+map <C-f> :Files<CR>
+map <leader>b :Buffers<CR>
+" nnoremap <leader>g :Rg<CR>
+nnoremap <leader>t :Tags<CR>
+nnoremap <leader>m :Marks<CR>
+
+
+let g:fzf_tags_command = 'ctags -R'
+" Border color
+let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
+
+let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
+let $FZF_DEFAULT_COMMAND="rg --files --hidden"
+
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+"Get Files
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
+
+
+" Get text in files with Rg
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+" Ripgrep advanced
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+
+" Git grep
+command! -bang -nargs=* GGrep
+  \ call fzf#vim#grep(
+  \   'git grep --line-number '.shellescape(<q-args>), 0,
+  \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0):
+
+" ----------------------------------------------------------------------------
 " Treesitter
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
@@ -219,3 +312,20 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
+" ----------------------------------------------------------------------------
+" vim-test
+" these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
+" strategy - spawn a :terminal for tests
+let test#strategy = "neovim"
+
+" use gradle if found
+if filereadable("./gradlew")
+    let test#java#runner = 'gradletest'
+    let test#java#gradletest#executable = './gradlew test'
+endif
