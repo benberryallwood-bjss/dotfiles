@@ -31,6 +31,7 @@ call plug#begin("~/.config/nvim/autoload/plugged")
   Plug 'junegunn/gv.vim'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-unimpaired'
   " Plug 'tpope/vim-capslock'
   Plug 'easymotion/vim-easymotion'
   Plug 'alvan/vim-closetag'
