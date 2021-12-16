@@ -15,3 +15,6 @@ export SAVEHIST=10000
 
 # Homebrew
 export HOMEBREW_BUNDLE_FILE="~/.dotfiles/Brewfile"
+
+# dotnet
+export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
