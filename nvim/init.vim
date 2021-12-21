@@ -117,7 +117,7 @@ let g:AutoPairsFlyMode = 1
 
 " ----------------------------------------------------------------------------
 " CoC
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-java', 'coc-pyright', 'coc-eslint']
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-java', 'coc-pyright', 'coc-eslint', 'coc-omnisharp', 'coc-go', 'coc-snippets']
 
 " Use <C-space> to trigger completion
 inoremap <silent><expr> <c-space> coc#refresh()

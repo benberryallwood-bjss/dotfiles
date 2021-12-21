@@ -19,3 +19,6 @@ export HOMEBREW_BUNDLE_FILE="~/.dotfiles/Brewfile"
 # dotnet
 export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 export DOTNET_CLI_TELEMETRY_OPTOUT="1"
+
+# nvm
+export NVM_DIR="$HOME/.config/nvm"
