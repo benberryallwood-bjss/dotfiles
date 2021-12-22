@@ -9,6 +9,7 @@ endif
 call plug#begin("~/.config/nvim/autoload/plugged")
   " Colourscheme
   Plug 'shaunsingh/nord.nvim'
+  Plug 'EdenEast/nightfox.nvim'
 
   " NERDTree
   Plug 'preservim/nerdtree'
