@@ -90,7 +90,6 @@ syntax enable
 colorscheme nordfox
 
 " NERDTree
-" nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-n> :NERDTreeFocus<CR>
 
 " start NERDTree when Vim is started without file arguments.
