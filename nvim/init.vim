@@ -87,7 +87,7 @@ set smartcase
 
 " Colourscheme
 syntax enable
-colorscheme nord
+colorscheme nordfox
 
 " NERDTree
 " nnoremap <C-n> :NERDTreeToggle<CR>
@@ -110,7 +110,8 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 
 " Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'base16_nord'
+" let g:airline_theme = 'base16_nord'
+let g:airline_theme = 'nord_minimal'
 
 " Autopairs
 let g:AutoPairsFlyMode = 1
