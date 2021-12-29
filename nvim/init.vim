@@ -30,10 +30,10 @@ nnoremap ,html :-1read $XDG_CONFIG_HOME/nvim/.html-template.html<CR>6jf>a
 
 " Abbreviations for insert mode
 " JavaScript
-iabbr clg console.log()<ESC>
+" iabbr clg console.log()<ESC>
 
 " Java
-iabbr sout System.out.println()<ESC>
+" iabbr sout System.out.println()<ESC>
 
 " Copy contents of current file to clipboard
 command! CopyFile !cat %:p | pbcopy
