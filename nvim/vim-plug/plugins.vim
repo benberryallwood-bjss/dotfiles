@@ -28,8 +28,12 @@ call plug#begin("~/.config/nvim/autoload/plugged")
 
   Plug 'airblade/vim-gitgutter'
   Plug 'jiangmiao/auto-pairs'
+
+  " Git
   Plug 'tpope/vim-fugitive'
   Plug 'junegunn/gv.vim'
+  Plug 'idanarye/vim-merginal'
+
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-unimpaired'
