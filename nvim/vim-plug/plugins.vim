@@ -44,6 +44,7 @@ call plug#begin("~/.config/nvim/autoload/plugged")
   Plug 'lervag/vimtex'
 
   " Snippets
+  Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
 
   " Tests
