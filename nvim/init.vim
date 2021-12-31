@@ -355,6 +355,11 @@ endif
 let g:vimtex_view_method = 'zathura'
 
 " ----------------------------------------------------------------------------
+" vim-rooter
+" disable by default for now
+let g:rooter_targets = ''
+
+" ----------------------------------------------------------------------------
 " which-key
 lua << EOF
   require("which-key").setup {
