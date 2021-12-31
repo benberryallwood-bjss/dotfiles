@@ -211,13 +211,33 @@ nnoremap <C-T> :call OpenTerminal()<CR>
 
 " Startify options
 " When opening a file or bookmark, seek and change to the root of the repo
-let g:startify_change_to_vcs_root = 0
+" let g:startify_change_to_vcs_root = 0
 " Custom header empty (for now)
 let g:startify_custom_header = ''
 " Use environment variables in path if shorter
 let g:startify_use_env = 1
 " Set directory to save sessions
 let g:startify_session_dir = '~/.config/nvim/session'
+" Auto start session in current dir
+let g:startify_session_autoload = 1
+" Auto update sessions
+let g:startify_session_persistence = 1
+" Remove 'empty buffer' and 'quit'
+let g:startify_enable_special = 0
+" Number of files to list
+let g:startify_files_number = 5
+" Lists
+let g:startify_lists = [
+          \ { 'type': 'files',     'header': ['   Files']            },
+          \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
+          \ { 'type': 'sessions',  'header': ['   Sessions']       },
+          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+          \ ]
+" Bookmarks
+let g:startify_bookmarks = [
+            \ { 'i': '~/.dotfiles/nvim/init.vim' },
+            \ { 'z': '~/.dotfiles/zsh/.zshrc' }
+            \ ]
 
 " ----------------------------------------------------------------------------
 " Chris@Machine fzf etc.
