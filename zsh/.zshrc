@@ -82,6 +82,12 @@ source $ZDOTDIR/completion.zsh
 # thefuck config
 eval $(thefuck --alias)
 
+# ---------------
+# History options
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+
 # ----------------------------
 # Set up nvm for node versions
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
