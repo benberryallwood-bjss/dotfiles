@@ -21,4 +21,10 @@ export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 export DOTNET_CLI_TELEMETRY_OPTOUT="1"
 
 # nvm
-export NVM_DIR="$HOME/.config/nvm"
+export NVM_DIR=$HOME/.config/nvm
+
+# ranger
+export RANGER_LOAD_DEFAULT_RC=FALSE
+
+# folders
+export ACADEMY=~/Documents/academy
