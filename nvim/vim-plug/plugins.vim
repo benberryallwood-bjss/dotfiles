@@ -40,6 +40,9 @@ call plug#begin("~/.config/nvim/autoload/plugged")
   " Code completion
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+  " Latex
+  Plug 'lervag/vimtex'
+
   " Snippets
   Plug 'honza/vim-snippets'
 
