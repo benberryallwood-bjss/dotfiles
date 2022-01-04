@@ -87,6 +87,7 @@ eval $(thefuck --alias)
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_REDUCE_BLANKS
+setopt nosharehistory
 
 # ----------------------------
 # Set up nvm for node versions
