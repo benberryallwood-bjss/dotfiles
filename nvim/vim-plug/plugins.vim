@@ -10,6 +10,7 @@ call plug#begin("~/.config/nvim/autoload/plugged")
   " Colourscheme
   Plug 'shaunsingh/nord.nvim'
   Plug 'EdenEast/nightfox.nvim'
+  Plug 'jeffkreeftmeijer/vim-dim'
 
   " NERDTree
   Plug 'preservim/nerdtree'
