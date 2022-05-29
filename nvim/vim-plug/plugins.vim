@@ -12,8 +12,9 @@ call plug#begin("~/.config/nvim/autoload/plugged")
   Plug 'EdenEast/nightfox.nvim'
   Plug 'jeffkreeftmeijer/vim-dim'
 
-  " NERDTree
+  " File tree
   Plug 'preservim/nerdtree'
+  Plug 'kyazdani42/nvim-tree.lua'
 
   Plug 'folke/which-key.nvim'
 
@@ -61,4 +62,5 @@ call plug#begin("~/.config/nvim/autoload/plugged")
 
   " Icons (load last)
   Plug 'ryanoasis/vim-devicons'
+  Plug 'kyazdani42/nvim-web-devicons' " for nvim-tree
 call plug#end()

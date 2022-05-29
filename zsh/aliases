@@ -29,5 +29,22 @@ alias gpsh='git push'
 alias gf='git fetch'
 alias gcl='git clone'
 
-alias gl1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all"
-alias gl2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
+alias gl1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"
+alias gl2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
+
+alias gl1a='gl1 --all'
+alias gl2a='gl2 --all'
+
+# Conflicts
+alias fix='$EDITOR `gd --name-only | uniq`'
+
+# change alacritty theme
+alias dark='/Users/Ben.Berry-Allwood/.local/bin/alacritty-colorscheme apply nord-dark.yaml'
+alias light='/Users/Ben.Berry-Allwood/.local/bin/alacritty-colorscheme apply polar-light.yaml'
+
+# tree
+alias tree='exa --tree'
+alias tree1='tree --level 1'
+alias tree2='tree --level 2'
+alias tree3='tree --level 3'
+alias tree4='tree --level 4'

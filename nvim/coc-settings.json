@@ -24,5 +24,6 @@
   "javascript.suggestionActions.enabled": false,
   "codeLens.enable": true,
   "java.referencesCodeLens.enabled": true,
+  "javascript.referencesCodeLens.enable": false,
   "python.pythonPath": "python3"
 }

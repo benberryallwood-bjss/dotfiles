@@ -95,7 +95,16 @@ setopt nosharehistory
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# ----------------------------
+# path for pyenv
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+
 # -------------------
 # Syntax highlighting
-
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

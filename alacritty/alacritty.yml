@@ -84,9 +84,9 @@ font:
     y: 0
 
 window:
-  padding:
-    x: 2
-    y: 2
+  # padding:
+  # x: 2
+  # y: 2
   decorations: None
 
 scrolling:
@@ -103,7 +103,10 @@ scrolling:
 
 selection:
   semantic_escape_chars: ',│`|:"'' ()[]{}<>'
-  save_to_clipboard: true
+  # When set to `true`, selected text will be copied to both the primary and
+  # the selection clipboard. Otherwise, it will only be copied to the selection
+  # clipboard.
+  save_to_clipboard: false
 
 live_config_reload: true
 
@@ -116,3 +119,6 @@ key_bindings:
   # - { key: Subtract, mods: Control, action: DecreaseFontSize }
   - { key: Minus, mods: Control, action: DecreaseFontSize }
   # - { key: N, mods: Control, action: SpawnNewInstance } # conflicts with vim autocomplete
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }

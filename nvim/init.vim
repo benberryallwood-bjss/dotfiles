@@ -1,4 +1,5 @@
 source $XDG_CONFIG_HOME/nvim/vim-plug/plugins.vim
+source $XDG_CONFIG_HOME/nvim/settings/nvim-tree.vim
 
 " Save cursor position and fold info
 set viewoptions=cursor,folds
@@ -48,6 +49,8 @@ set updatetime=100
 set number relativenumber
 set cursorline
 
+set nowrap
+
 " Show fold symbols in column on left
 set foldcolumn=1
 
@@ -87,19 +90,21 @@ set smartcase
 
 " Colourscheme
 syntax enable
-colorscheme nordfox
+colorscheme nightfox
 
 " NERDTree
-nnoremap <C-n> :NERDTreeFocus<CR>
+" nnoremap <C-n> :NERDTreeFocus<CR>
+" nnoremap <Leader>e :NERDTreeToggle<CR>
+nnoremap <Leader>e :NvimTreeToggle<CR>
 
 " start NERDTree when Vim is started without file arguments.
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
 " start NERDTree when Vim starts with a directory argument.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
-    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
+"     \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
 
 " exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
@@ -113,7 +118,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'nord_minimal'
 
 " Autopairs
-let g:AutoPairsFlyMode = 1
+let g:AutoPairsFlyMode = 0
 
 " ----------------------------------------------------------------------------
 " CoC

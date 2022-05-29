@@ -26,5 +26,17 @@ export NVM_DIR=$HOME/.config/nvm
 # ranger
 export RANGER_LOAD_DEFAULT_RC=FALSE
 
-# folders
-export ACADEMY=~/Documents/academy
+# docker
+# run in multipass vm
+# https://nemzes.net/posts/docker-mac-without-docker-desktop/
+export DOCKER_HOST=192.168.64.2
+
+# java
+# export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home"
+
+# python3.8
+# export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+
+# poetry (for python)
+# export PATH="/Users/Ben.Berry-Allwood/Library/Python/3.9/bin:$PATH"
