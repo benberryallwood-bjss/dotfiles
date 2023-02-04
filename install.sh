@@ -16,8 +16,8 @@
 brew bundle --file ~/.dotfiles/Brewfile
 
 # Install vim-plug
-sh -c 'curl -fLo ~/.config/local/share/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# sh -c 'curl -fLo ~/.config/local/share/nvim/site/autoload/plug.vim --create-dirs \
+#        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Install neovim plugins
-nvim -c PlugInstall
+# nvim -c PlugInstall
