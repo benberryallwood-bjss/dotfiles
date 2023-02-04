@@ -10,3 +10,5 @@
 	process = git-lfs filter-process
 [core]
 	excludesfile = /Users/Ben.Berry-Allwood/.gitignore_global
+[push]
+	autoSetupRemote = true

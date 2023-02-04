@@ -2,6 +2,12 @@
 
 # ~/.config/zsh/aliases
 
+# neovim
+alias v='nvim'
+
+# tmux
+alias t='tmux'
+
 # ls
 alias ls='ls -GF'
 alias l='ls'
@@ -39,8 +45,20 @@ alias gl2a='gl2 --all'
 alias fix='$EDITOR `gd --name-only | uniq`'
 
 # change alacritty theme
-alias dark='/Users/Ben.Berry-Allwood/.local/bin/alacritty-colorscheme apply nord-dark.yaml'
-alias light='/Users/Ben.Berry-Allwood/.local/bin/alacritty-colorscheme apply polar-light.yaml'
+alias dark-alacritty='/Users/Ben.Berry-Allwood/.local/bin/alacritty-colorscheme apply nord-dark.yaml'
+alias light-alacritty='/Users/Ben.Berry-Allwood/.local/bin/alacritty-colorscheme apply polar-light.yaml'
+
+# change nvim theme
+alias dark-nvim="sed -i '' '/vim\.g\.catppuccin_flavour = \".*\"/s/latte/frappe/' /Users/Ben.Berry-Allwood/.config/nvim/lua/user/colorscheme.lua\
+  && sed -i '' '/set background/s/light/dark/' /Users/Ben.Berry-Allwood/.config/nvim/lua/user/colorscheme.lua\
+  && sed -i '' '/colorscheme/s/dayfox/nordfox/' /Users/Ben.Berry-Allwood/.config/nvim/lua/user/colorscheme.lua"
+alias light-nvim="sed -i '' '/vim\.g\.catppuccin_flavour = \".*\"/s/frappe/latte/' /Users/Ben.Berry-Allwood/.config/nvim/lua/user/colorscheme.lua\
+  && sed -i '' '/set background/s/dark/light/' /Users/Ben.Berry-Allwood/.config/nvim/lua/user/colorscheme.lua\
+  && sed -i '' '/colorscheme/s/nordfox/dayfox/' /Users/Ben.Berry-Allwood/.config/nvim/lua/user/colorscheme.lua"
+
+# change nvim and alacritty theme
+alias dark='dark-alacritty && dark-nvim'
+alias light='light-alacritty && light-nvim'
 
 # tree
 alias tree='exa --tree'
@@ -48,3 +66,10 @@ alias tree1='tree --level 1'
 alias tree2='tree --level 2'
 alias tree3='tree --level 3'
 alias tree4='tree --level 4'
+
+# poetry (for python)
+alias poetry=poetry@1.2.2  # multiple versions installed with pipx suffixes
+alias pi='poetry install'
+alias pib='poetry install &'
+alias psh='poetry shell'
+alias pish='poetry install && poetry shell'

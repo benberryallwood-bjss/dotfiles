@@ -20,6 +20,9 @@ export HOMEBREW_BUNDLE_FILE="~/.dotfiles/Brewfile"
 export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 export DOTNET_CLI_TELEMETRY_OPTOUT="1"
 
+# azure functions
+export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT="1"
+
 # nvm
 export NVM_DIR=$HOME/.config/nvm
 
@@ -39,4 +42,4 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home
 # export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
 # poetry (for python)
-# export PATH="/Users/Ben.Berry-Allwood/Library/Python/3.9/bin:$PATH"
+export PATH="/Users/Ben.Berry-Allwood/.local/bin:$PATH"

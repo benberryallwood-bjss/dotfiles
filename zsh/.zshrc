@@ -8,6 +8,7 @@ source $ZDOTDIR/aliases
 # --------
 # Bindings
 
+bindkey -e
 bindkey -s '^o' '. ranger\n'
 
 # ------
@@ -41,7 +42,7 @@ setopt PUSHD_SILENT         # Do not print the directory stack after pushd or po
 # -------
 # Vi mode
 
-bindkey -v
+# bindkey -v
 export KEYTIMEOUT=1
 
 cursor_mode() {
@@ -74,6 +75,7 @@ cursor_mode
 # -------------
 # Auto-complete
 
+fpath+=~/.config/zsh/zfunc
 autoload -U compinit && compinit
 _comp_options+=(globdots)   # With hidden files
 source $ZDOTDIR/completion.zsh
@@ -99,6 +101,12 @@ setopt nosharehistory
 # path for pyenv
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+
+
+# ----------------------------
+# pnpm
+export PNPM_HOME="/Users/Ben.Berry-Allwood/.config/local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
 
 
 # -------------------
