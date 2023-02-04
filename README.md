@@ -6,20 +6,18 @@ Inspired by [Beyond Dotfiles in 100 Seconds](https://github.com/eieioxyz/Beyond-
 
 1. Install Command Line Tools, a prerequisite for Git and Homebrew.
 
-```zsh
+```bash
 xcode-select --install
 ```
 
-
 2. Clone repo into new hidden directory.
 
-```zsh
+```bash
 git clone https://github.com/benberryallwood-bjss/dotfiles.git ~/.dotfiles
 ```
 
-
 3. Run installation script.
 
-```zsh
+```bash
 ~/.dotfiles/install.sh
 ```
