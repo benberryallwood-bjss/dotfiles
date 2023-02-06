@@ -33,8 +33,5 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 # export JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home"
 
-# python3.8
-# export PATH="/usr/local/opt/python@3.8/bin:$PATH"
-
 # poetry (for python)
 export PATH="/Users/Ben.Berry-Allwood/.local/bin:$PATH"
