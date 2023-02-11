@@ -1,5 +1,10 @@
 # ~/.config/zsh/.zshrc
 
+# -----------------------
+# Avoid "last login" line
+
+printf '\33c\e[3J'
+
 # -------
 # Aliases
 
