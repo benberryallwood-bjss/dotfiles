@@ -221,9 +221,6 @@ font:
     y: 0
 
 window:
-  # padding:
-  # x: 2
-  # y: 2
   decorations: None
 
 scrolling:
