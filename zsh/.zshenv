@@ -15,6 +15,7 @@ export SAVEHIST=10000
 
 # Homebrew
 export HOMEBREW_BUNDLE_FILE="~/.dotfiles/Brewfile"
+export PATH="/usr/local/sbin:$PATH"
 
 # dotnet
 export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
@@ -35,3 +36,9 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home
 
 # poetry (for python)
 export PATH="/Users/Ben.Berry-Allwood/.local/bin:$PATH"
+
+# scripts
+export PATH="$PATH:$HOME/.scripts"
+
+# spark
+export SPARK_LOCAL_IP="127.0.0.1"
