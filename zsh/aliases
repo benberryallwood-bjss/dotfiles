@@ -6,7 +6,7 @@
 alias v='nvim'
 
 # tmux
-alias t='tmux'
+alias t='tmux a || tmux'
 
 # ls
 alias ls='ls -GF'
@@ -68,8 +68,10 @@ alias tree3='tree --level 3'
 alias tree4='tree --level 4'
 
 # poetry (for python)
-alias poetry=poetry@1.2.2  # multiple versions installed with pipx suffixes
 alias pi='poetry install'
 alias pib='poetry install &'
 alias psh='poetry shell'
 alias pish='poetry install && poetry shell'
+
+# swap-env
+alias e='swap-env'
