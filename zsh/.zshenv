@@ -31,3 +31,9 @@ export PATH="$PATH:$HOME/.scripts"
 
 # spark
 export SPARK_LOCAL_IP="127.0.0.1"
+
+# cargo
+. "$HOME/.cargo/env"
+
+# uv
+export PATH="/Users/Ben.Berry-Allwood/.config/local/share/../bin:$PATH"
