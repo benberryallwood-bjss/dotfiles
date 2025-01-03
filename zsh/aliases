@@ -2,6 +2,10 @@
 
 # ~/.config/zsh/aliases
 
+alias j='jobs -l'
+
+alias bh='bat --plain --language help'
+
 # neovim
 alias v='nvim'
 
@@ -9,11 +13,11 @@ alias v='nvim'
 alias t='tmux a || tmux'
 
 # ls
-alias ls='ls -GF'
-alias l='ls'
-alias la='l -A'
-alias ll='l -o'
-alias lla='l -oA'
+alias l='eza'
+alias ls='eza --all --long'
+alias la='eza --all'
+alias ll='eza --long'
+alias lt='eza --tree --git-ignore'
 
 # cd
 alias ..='cd ..'
@@ -28,18 +32,14 @@ alias g='git'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
-alias gl='git log --graph --oneline --decorate'
 alias gd='git diff'
 alias gp='git pull'
 alias gpsh='git push'
 alias gf='git fetch'
-alias gcl='git clone'
 
-alias gl1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"
-alias gl2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
-
-alias gl1a='gl1 --all'
-alias gl2a='gl2 --all'
+alias gl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"
+alias gla='gl --all'
+alias glm='git log --pretty=format:%B'
 
 # Conflicts
 alias fix='$EDITOR `gd --name-only | uniq`'
@@ -61,17 +61,19 @@ alias dark='dark-alacritty && dark-nvim'
 alias light='light-alacritty && light-nvim'
 
 # tree
-alias tree='exa --tree'
+alias tree='lt'
 alias tree1='tree --level 1'
 alias tree2='tree --level 2'
 alias tree3='tree --level 3'
 alias tree4='tree --level 4'
 
 # poetry (for python)
-alias pi='poetry install'
-alias pib='poetry install &'
+alias pi='poetry install --all-extras'
+alias pis='pi --sync'
 alias psh='poetry shell'
-alias pish='poetry install && poetry shell'
 
 # swap-env
 alias e='swap-env'
+
+# databricks-cli
+alias dab='databricks bundle'
