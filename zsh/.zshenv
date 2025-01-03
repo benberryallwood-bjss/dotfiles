@@ -18,24 +18,13 @@ export HOMEBREW_BUNDLE_FILE="~/.dotfiles/Brewfile"
 export PATH="/usr/local/sbin:$PATH"
 
 # dotnet
-export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 export DOTNET_CLI_TELEMETRY_OPTOUT="1"
 
 # azure functions
 export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT="1"
 
-# nvm
-export NVM_DIR=$HOME/.config/nvm
-
 # ranger
 export RANGER_LOAD_DEFAULT_RC=FALSE
-
-# java
-# export JAVA_HOME=$(/usr/libexec/java_home)
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home"
-
-# poetry (for python)
-export PATH="/Users/Ben.Berry-Allwood/.local/bin:$PATH"
 
 # scripts
 export PATH="$PATH:$HOME/.scripts"
