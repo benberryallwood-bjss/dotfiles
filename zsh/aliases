@@ -77,3 +77,7 @@ alias e='swap-env'
 
 # databricks-cli
 alias dab='databricks bundle'
+
+# mise
+alias mr='mise run'
+alias mx='mise exec'
