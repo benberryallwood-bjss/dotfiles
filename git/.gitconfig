@@ -12,3 +12,7 @@
 	excludesfile = /Users/Ben.Berry-Allwood/.gitignore_global
 [push]
 	autoSetupRemote = true
+[diff]
+	submodule = log
+[alias]
+	wt = worktree
