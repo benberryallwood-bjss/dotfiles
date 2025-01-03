@@ -16,27 +16,6 @@ source $ZDOTDIR/aliases
 bindkey -e
 bindkey -s '^o' '. ranger\n'
 
-# ------
-# Prompt
-
-# Find and set branch name var if in git repository.
-function git_branch_name()
-{
-  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
-  if [[ $branch == "" ]];
-  then
-    :
-  else
-    echo '- ('$branch')'
-  fi
-}
-
-# Enable substitution in the prompt.
-setopt prompt_subst
-
-# Config for prompt. PS1 synonym.
-prompt='%F{green}%2(/.%2~.%2/)%f %F{yellow}$(git_branch_name)%f > '
-
 # ---------------
 # Directory stack
 
@@ -81,9 +60,11 @@ cursor_mode
 # Auto-complete
 
 fpath+=~/.config/zsh/zfunc
-autoload -U compinit && compinit
+autoload -Uz compinit && compinit
 _comp_options+=(globdots)   # With hidden files
 source $ZDOTDIR/completion.zsh
+
+zstyle ':completion:*' menu select
 
 # --------------
 # thefuck config
@@ -103,21 +84,18 @@ setopt nosharehistory
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # ----------------------------
-# path for pyenv
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-
-
-# ----------------------------
 # pnpm
 export PNPM_HOME="/Users/Ben.Berry-Allwood/.config/local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-
 
 # -------------------
 # Syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# ----------------------------
+# starship
+eval "$(starship init zsh)"
+
+# ----------------------------
+# mise
+# eval "$(mise activate zsh)"
