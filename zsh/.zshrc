@@ -78,15 +78,8 @@ setopt HIST_REDUCE_BLANKS
 setopt nosharehistory
 
 # ----------------------------
-# Set up nvm for node versions
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# ----------------------------
-# pnpm
-export PNPM_HOME="/Users/Ben.Berry-Allwood/.config/local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
 
 # -------------------
 # Syntax highlighting
