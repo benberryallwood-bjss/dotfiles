@@ -14,7 +14,7 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 
 # Homebrew
-export HOMEBREW_BUNDLE_FILE="~/.dotfiles/Brewfile"
+export HOMEBREW_BUNDLE_FILE="$HOME/.dotfiles/Brewfile"
 export PATH="/usr/local/sbin:$PATH"
 
 # dotnet
@@ -36,4 +36,4 @@ export SPARK_LOCAL_IP="127.0.0.1"
 . "$HOME/.cargo/env"
 
 # uv
-export PATH="/Users/Ben.Berry-Allwood/.config/local/share/../bin:$PATH"
+export PATH="$HOME/.config/local/bin:$PATH"
